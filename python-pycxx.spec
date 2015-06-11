@@ -104,7 +104,7 @@ cat > $RPM_BUILD_ROOT%{_npkgconfigdir}/PyCXX.pc <<EOF
 prefix=%{_prefix}
 exec_prefix=%{_prefix}
 includedir=%{py_incdir}
-srcdir=%{_datadir}/%{name}
+srcdir=%{_datadir}/%{name}/CXX
 
 Name: PyCXX
 Description: Write Python extensions in C++
@@ -118,7 +118,7 @@ cat > $RPM_BUILD_ROOT%{_npkgconfigdir}/Py3CXX.pc <<EOF
 prefix=%{_prefix}
 exec_prefix=%{_prefix}
 includedir=%{py3_incdir}
-srcdir=%{_datadir}/python3-%{modname}
+srcdir=%{_datadir}/python3-%{modname}/CXX
 
 Name: Py3CXX
 Description: Write Python 3 extensions in C++
