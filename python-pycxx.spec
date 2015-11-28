@@ -66,21 +66,18 @@ files for Python 3. There is no non-devel package needed.
 
 %build
 %if %{with python2}
-%{__python} setup.py build --build-base build-2
+%py_build
 %endif
 
 %if %{with python3}
-%{__python3} setup.py build --build-base build-3
+%py3_build
 %endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %if %{with python2}
-%{__python} setup.py \
-	build --build-base build-2 \
-	install --skip-build \
-	--optimize=2 \
+%py_install \
 	--install-data=%{_datadir}/%{name} \
 	--root=$RPM_BUILD_ROOT
 
@@ -88,10 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %if %{with python3}
-%{__python3} setup.py \
-	build --build-base build-3 \
-	install --skip-build \
-	--optimize=2 \
+%py3_install \
 	--install-data=%{_datadir}/python3-%{modname} \
 	--root=$RPM_BUILD_ROOT
 %endif
