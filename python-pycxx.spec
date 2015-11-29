@@ -10,6 +10,7 @@ Release:	1
 License:	BSD
 Group:		Development/Libraries
 URL:		http://CXX.sourceforge.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildArch:	noarch
 Source0:	http://downloads.sourceforge.net/cxx/%{modname}-%{version}.tar.gz
 # Source0-md5:	20bcc50e9529aad3d646c1c48c1502d9
