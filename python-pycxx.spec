@@ -60,9 +60,9 @@ files for Python 3. There is no non-devel package needed.
 
 %prep
 %setup -q -n %{modname}-%{version}
-%patch0 -p1 -b .change-include-paths
-%patch1 -p1 -b .setup
-%patch2 -p1 -b .python3-syntax-fix
+%patch -P0 -p1 -b .change-include-paths
+%patch -P1 -p1 -b .setup
+%patch -P2 -p1 -b .python3-syntax-fix
 
 
 %build
